@@ -1,0 +1,33 @@
+.btn_read{
+ text-align: end;
+ width: 100%;
+ padding-top: 80px;
+ padding-right: 10px;
+}
+
+.post_class{
+ display: inline-flex;
+ border: 2px solid silver;
+ margin-bottom: 20px;
+}
+
+.params_title{
+  padding-left: 1em;
+  font-size: 17px;
+}
+
+.post_paragraph{
+  width: 50%;
+  margin-top: 4.5em;
+}
+.params_heading{
+  font-weight: normal;
+}
+
+.post_center{
+  width: 100%;
+  display: inline-flex;
+}
+
+
+

@@ -1,0 +1,37 @@
+---
+import MainPageLayout from "../layouts/MainPageLayout.astro";
+import StandartLayout from "../layouts/StandartLayout.astro";
+import Carousel from "../components/Carousel/Carousel.astro";
+import LastPosts from "../components/LastPosts/LastPosts.astro";
+import PinnedLinks from "../components/PinnedLinks/PinnedLinks.astro";
+
+const res = await fetch(
+  `${
+    import.meta.env.PUBLIC_URL
+  }/api/main-page?populate[0]=page.documents&populate[1]=slider.image&populate[2]=pinned_links.image`
+)
+  .then((res) => res.json())
+  .then((res) => res.data);
+
+ const news = await fetch(
+   `${
+     import.meta.env.PUBLIC_URL
+   }/api/posts?pagination[page]=1&pagination[pageSize]=5&sort=createdAt:desc&populate=*`
+ )
+   .then((res) => res.json())
+   .then((res) => res.data);
+---
+
+<StandartLayout title="Администрация Чаа-Хольского кожууна">
+  <MainPageLayout>
+    <div class="">
+      <div class="">
+        <Carousel content={res.slider} />
+        <div class="">
+           <LastPosts news={news} /> 
+        </div>
+      </div>
+      <PinnedLinks content={res.pinned_links} />
+    </div>
+  </MainPageLayout>
+</StandartLayout>

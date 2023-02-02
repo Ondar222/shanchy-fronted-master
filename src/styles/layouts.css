@@ -1,0 +1,13 @@
+
+
+.layout {
+  /* flex xs:flex-col md:flex-row gap-5 */
+  display: flex;
+  gap: 15px;
+}
+
+.layout__children {
+  width: 75%;
+  display: flex;
+ /* [&>ul]:list-disc [&>p]:text-justify sm:py-3 xs:py-3 md:py-0 lg:py-0 */
+}
