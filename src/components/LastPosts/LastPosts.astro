@@ -53,23 +53,22 @@ const params = Astro.props;
   }
 
   .last-news__card:nth-child(2) {
-    width: 40%;
-    height: 40%;
+    max-width: 500px;
+    max-height: 500px;
   }
 
   .last-news__card {
    width: 480px;
    height: 500px;
-
   }
 
   .last-news__card img {
     width: 60%;
-    height: 50%;
+    height: 40%;
   }
 
   .last-news__card:first-child img {
-    width: 115%;
+    width: 105%;
   }
  
 
@@ -91,7 +90,7 @@ const params = Astro.props;
   }
 
   .last-news__card:first-child {
-    width: 50%;
+    width: 740px;
     height: 100%;
   }
   .last-news__card-content__container {
@@ -129,6 +128,7 @@ const params = Astro.props;
     }   
     .last-news__card-title {
       color: black;
+      font-weight: normal;
   }
 
   .last-news__card:first-child{
