@@ -16,7 +16,7 @@ const params = Astro.props;
               class="first:max-w-full first:max-h-[400px] max-w-[300px] max-h-[200px] h-[200px] object-cover"
             />
 
-            <div class="last-news__card-content__container">
+
               <div class="last-news__card-content">
                 <h3 class="text-lg break-words">
                   <a class="last-news__card-title" href={`/news/${item.id}`}>
@@ -31,7 +31,8 @@ const params = Astro.props;
                 </div>
               </div>
             </div>
-          </div>
+          
+
         );
       })
     }
@@ -65,21 +66,16 @@ const params = Astro.props;
   }
 
   .last-news__card:first-child img {
-    width: 120%;
-    height: 100%;
-    
+    width: 115%;
   }
-
-  .last-news__card-content__container {
-    position: static;
-  }
+ 
 
   .last-news__card-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
 
-    padding: 20px 0;
+    padding: 30px 0;
   }
 
   .last-news__card-title {
@@ -91,7 +87,11 @@ const params = Astro.props;
     font-size: 1em;
   }
 
-  .last-news__card:first-child .last-news__card-content__container {
+  .last-news__card:first-child {
+    width: 50%;
+    height: 100%;
+  }
+  .last-news__card-content__container {
     position: absolute;
     top: 0;
 
@@ -103,15 +103,20 @@ const params = Astro.props;
     height: 100%;
   }
 
-  .last-news__card:first-child
+  .last-news__card:first-child{
+    color: brown;
+  }
     .last-news__card-content__container
+    {
+      display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
     .last-news__card-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 26%;
-
-    background-color: red;
+    gap: 5px;
+    width: 60%;
 
     padding: 30px;
   }
@@ -131,7 +136,7 @@ const params = Astro.props;
       color: black;
     }
     .last-news__card-date {
-     
+     color: brown;
   } 
 
   .Post_title{
@@ -142,4 +147,6 @@ const params = Astro.props;
     font-weight: bold;
     font-size: 1.5em;
   }
+
+  .
 </style>

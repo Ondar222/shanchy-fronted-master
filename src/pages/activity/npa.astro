@@ -27,8 +27,8 @@ const res = await fetch(
           res?.page?.documents?.map((item) => (
             <DocumentLink
               client:load
-              filename={item?.file?.name}
-              url={import.meta.env.PUBLIC_URL + item?.file?.url}
+              filename={item.file.name}
+              url={import.meta.env.PUBLIC_URL + item.file.url}
             />
           ))
         }

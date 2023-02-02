@@ -20,7 +20,10 @@ const vacancy = await res.data;
         {
           vacancy?.map(({ id, title, description }) => {
             return (
-              <VacancyCard key={id} title={title} description={description} />
+              <VacancyCard
+               key={id}
+              title={title}
+               description={description} />
             );
           })
         }
