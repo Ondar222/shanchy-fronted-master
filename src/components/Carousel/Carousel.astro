@@ -1,69 +1,9 @@
 ---
+import DemoCarousel from "./Carousel";
+
 const params = Astro.props;
 ---
 
 <section>
-  <img class="Shanchy_photo" src="/public/Шанчы.jpg"
-    class=""
-    alt="Shanchy_photo"
-  />
-  <div
-    id="indicators-carousel"
-    class=""
-    data-carousel="static"
-  >
-    <div class="">
-      {
-        params.content.map((item) => {
-          return (
-            <div
-              class=""
-              data-carousel-item="active"
-            >
-              <img
-                src={`${import.meta.env.PUBLIC_URL}${item.image.url}`}
-                src="/favicon.svg"
-                class=""
-                alt="..."
-              />
-            </div>
-          );
-        })
-      }
-    </div>
-    <div
-      class=""
-    >
-      {
-        params.content.map((item) => {
-          return (
-            <button
-              type="button"
-              class=""
-              aria-current="true"
-              aria-label="Slide 1"
-              data-carousel-slide-to="0"
-            />
-          );
-        })
-      }
-    </div>
-
-  </div>
+  <DemoCarousel client:load/>
 </section>
-
-<style>
-  .Shanchy_photo{
-    width: 86.5%;
-    height: 100%;
-    margin-bottom: 10px;
-  }
-  .btn_previous{
-    width: 20px;
-    height: 20px;
-  }
-  .btn_next{
-    width: 20px;
-    height: 20px;
-  }
-</style>

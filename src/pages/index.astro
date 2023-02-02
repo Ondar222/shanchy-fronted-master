@@ -4,6 +4,7 @@ import StandartLayout from "../layouts/StandartLayout.astro";
 import Carousel from "../components/Carousel/Carousel.astro";
 import LastPosts from "../components/LastPosts/LastPosts.astro";
 import PinnedLinks from "../components/PinnedLinks/PinnedLinks.astro";
+import DemoCarousel from "../components/Carousel/Carousel";
 
 const res = await fetch(
   `${
@@ -26,12 +27,13 @@ const res = await fetch(
   <MainPageLayout>
     <div class="">
       <div class="">
-        <Carousel content={res.slider} />
+        <Carousel />
+        <!-- <Carousel content={res.slider} /> -->
         <div class="">
-           <LastPosts news={news} /> 
+           <!-- <LastPosts news={news} />  -->
         </div>
       </div>
-      <PinnedLinks content={res.pinned_links} />
+      <!-- <PinnedLinks content={res.pinned_links} /> -->
     </div>
   </MainPageLayout>
 </StandartLayout>
