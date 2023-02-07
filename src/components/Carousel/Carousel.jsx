@@ -1,34 +1,27 @@
-import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-const DemoCarousel = () => {
-  return (
-  <div >
-    <Carousel
-      showArrows={true}
-      axis="horizontal"
-      width="80%"
-      swipeable={true}
+import React from 'react';
+import './styles.css'
 
-      // onChange={onChange}
-      // onClickItem={onClickItem}
-      // onClickThumb={onClickThumb}
-    >
-      <div>
-        <img src="/Шанчы.jpg" />
-        <p className="legend">Предупреждение о неблагоприятных явлениях погоды от 30 января 2023г.</p>
-      </div>
-      <div>
-        <img src="/N.jpg" />
-        <p className="legend">Слайдер два</p>
-      </div>
-    </Carousel>
-  </div>
-    
-  );
+const Slider = () => {
+    return (
+        <div className="index-page-slider">
+            {[1, 2, 3].map((item, index) => {
+                return (
+                    <div key={index} className="item">
+                        <div className="image" style={{backgroundImage: `url('https://api.mert.rtyva.ru/uploads/photo2_a5c23bae8b.jpg')`}}>
+                            <img src="/public/Шанчы.jpg"/></div>
+                        <div className="wrap">
+                            <div className="text">
+                                <div className="name">
+                                    Готовая дизайн система государственных сайтов
+                                </div>
+                                <p>Структура и демо-наполнение в соответствие с требованиями федеральных законов</p>
+                            </div>
+                        </div>
+                    </div>
+                )
+            })}
+        </div>
+    );
 };
-export default DemoCarousel;
 
-// Don't forget to include the css in your page
-// <link rel="stylesheet" href="carousel.css"/>
-// Begin DemoSliderControls
+export default Slider;

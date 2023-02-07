@@ -6,30 +6,35 @@ const PostCard = (params) => {
   } else {
     return (
       <div
-        className="post_class"
+        className="post__card"
         key={params.id}
       >
-        <div className="">
+        <div className="image-container">
           <img
             alt="some"
             src={params.preview_image}
             width="300px"
             height="250px"
-            className="dark:grayscale"
+            className="post__card__img"
           />
         </div>
 
-        <div className="params_title">
-          <div className="">
-            <h1 className="params_heading">{params.title}</h1>
+
+        <div className="content">
+
+          <div className="header">
+
+            <h1 className="heading">{params.title}</h1>
           </div>
-          <div>
+
+          <div className="body">
             <p className="text-md">{params.news_preview}</p>
           </div>
-          <div className="post_center">         
-              <p className="post_paragraph">Дата публикации:</p>
+
+          <div className="footer">         
+              <p className="">Дата публикации:</p>
               {/* {unixTimeConverter(params.createdAt)} */}
-             <div className="btn_read">
+             <div className="btn">
             <a href={`/news/post-${params.id}`} className="button dark:bg-gray-500">
               Читать
             </a>

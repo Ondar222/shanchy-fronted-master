@@ -1,9 +1,10 @@
 ---
-import DemoCarousel from "./Carousel";
-
+import Slider from "./Carousel";
 const params = Astro.props;
 ---
 
 <section>
-  <DemoCarousel client:load/>
+ <Slider client:load />
+ <script src="./slick.min.js" is:inline></script>
 </section>
+
