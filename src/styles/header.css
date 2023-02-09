@@ -17,10 +17,11 @@
 
   .header__service__search {
     flex: 1 !important;
+    
   }
 
   .header__brand-logo {
-    display: none !important
+    display: none !important;
   }
 
   .header__navbar {

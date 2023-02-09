@@ -15,7 +15,7 @@ const posts = await fetch(`${import.meta.env.PUBLIC_URL}/api/posts?populate=*`)
     <div>
       <script type="text/javascript"></script>
       <!-- <div set:html={pageName} /> -->
-      <div class="">
+      <div class="post__date__content">
         {
           posts.data.map((item: any) => {
             return (
@@ -49,3 +49,11 @@ const posts = await fetch(`${import.meta.env.PUBLIC_URL}/api/posts?populate=*`)
     </script>
   </MainPageLayout>
 </StandartLayout>
+
+<style>
+  .post__date__content{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+</style>

@@ -2,21 +2,12 @@
 const params = Astro.props;
 ---
 
-<div
-  id="card"
-  class=""
->
-  <div
-    id="card-header"
-    class=""
-  >
-    <h3>{params.position}</h3>
+<div id="card" class="card">
+  <div id="card-header" class="header">
+    <h3 class="header">{params.position}</h3>
   </div>
-  <div
-    id="card-body"
-    class=""
-  >
-    <div class="w-fit">
+  <div id="card-body" class="position">
+    <div class="image">
       <img
         src={import.meta.env.PUBLIC_URL + params.avatar.url}
         alt="some"
@@ -26,23 +17,67 @@ const params = Astro.props;
       />
     </div>
 
-    <div class="">
-      <div class="">
+    <div class="data__card__card">
+      <div class="data">
         <p>{params.surname}</p>
         <p>{params.name}</p>
         <p>{params.patronymic}</p>
       </div>
 
-      <div class="">
+      <div class="data__card">
         <p>{params.phone}</p>
         <p>{params.email}</p>
       </div>
     </div>
   </div>
-  <div
-    id="footer"
-    class=""
-  >
-    <a class="" href={`/management/person-${params.id}`}>Перейти в профиль</a>
+  <div id="footer" class="footer">
+    <a class="text__footer" href={`/management/person-${params.id}`}
+      >Время приема: каждую неделю в четверг с 16:30</a
+    >
   </div>
 </div>
+
+<style>
+  .card {
+    border-style: solid;
+    border-color: rgb(202, 200, 200);
+  }
+  .header {
+    background-color: rgb(228, 227, 227);
+    padding-top: 1em;
+    font-weight: bold;
+  }
+
+  .position {
+    background-color: #fff;
+    display: flex;
+  }
+  .data__card {
+    margin-top: 2em;
+  }
+  .data__card__card {
+    margin-top: 2em;
+  }
+
+  .footer {
+    height: 50px;
+    background-color: rgb(228, 227, 227);
+    text-align: right;
+    padding-right: 1em;
+    padding-top: 1em;
+  }
+  .rounded-full {
+    max-width: 180px;
+    min-width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    object-fit: cover;
+  }
+  .text__footer {
+    color: black;
+  }
+</style>

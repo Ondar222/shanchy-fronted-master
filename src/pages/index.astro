@@ -10,7 +10,7 @@ import RelatedPost from "../components/Posts/RelatedPost.astro";
 const res = await fetch(
   `${
     import.meta.env.PUBLIC_URL
-  }/api/main-page?populate[0]=page.documents&populate[1]=slider.image&populate[2]=pinned_links.image`
+  }/api/main-page?populate[0]=slider.image&populate[1]=page.document`
 )
   .then((res) => res.json())
   .then((res) => res.data);
@@ -28,7 +28,7 @@ const res = await fetch(
   <MainPageLayout>
     <div class="">
       <div class="">
-        <Carousel />s
+        <Carousel slider={res.slider} client:load/>
         <!-- <Carousel content={res.slider} /> -->
         <div class="">
            <LastPosts news={news} /> 
