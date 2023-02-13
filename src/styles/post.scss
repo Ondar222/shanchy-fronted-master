@@ -54,3 +54,9 @@
   object-fit: cover;
   background: blue;
 }
+
+@media (max-width: 450px){
+  .post__card__news{
+    width: 700px;
+  }
+}
