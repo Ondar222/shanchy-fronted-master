@@ -1,6 +1,5 @@
 @media (max-width: 767px) {
   .header {
-    width: 80% !important;
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;

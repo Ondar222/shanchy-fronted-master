@@ -106,6 +106,7 @@
       "image"
       "text" !important;
     grid-template-rows: 1fr 0.5fr !important;
+   
   }
 }
 
@@ -113,6 +114,7 @@
   display: grid !important;
   grid-template: "text image";
   grid-template-columns: 1fr 1fr;
+
 }
 
 .slick-slide div .item .image {

@@ -34,7 +34,7 @@ const PostCard = (params) => {
             <div className="btn">
               <a
                 href={`/news/post-${params.id}`}
-                className="button dark:bg-gray-500"
+                className="button"
               >
                 Читать
               </a>

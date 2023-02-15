@@ -30,6 +30,7 @@
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
+    "react-media": "^1.10.0",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
