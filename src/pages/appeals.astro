@@ -103,15 +103,15 @@ import DocumentLink from "../components/Document/DocumentLink";
          type="file" name="files" multiple />
       </div>
 
-      <div class="">
-        <div class="">
+      <div class="introduction">
+       
           <p class="appeal-paragraph">Я ознакомлен с</p>
           <DocumentLink
             filename="Политикой обработки персональных данных"
             url={`${import.meta.env.PUBLIC_URL}/uploads/politika_obrabotki_personalnyh_dannyh_e79f438d7a.pdf?updated_at=2022-11-24T03:08:46.185Z`}
           />
           <p>и принимаю публичную Оферту</p>
-        </div>
+     
       </div>
 
       <input class="appeal-input"
@@ -292,7 +292,7 @@ import DocumentLink from "../components/Document/DocumentLink";
         margin-top: 1em;
       }
       .appeal-input{
-        margin-top: 1em;
+        margin: 0px 20px;
         width: 100px;
         height: 40px;
       }

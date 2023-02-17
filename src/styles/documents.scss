@@ -1,3 +1,27 @@
+@media(max-width: 767px){
+  .input_document_page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:  4em;
+    padding: 20px 10px;
+  }
+  .input_bank{
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .input_input{
+    display: none;
+  }
+  .input_input p{
+   
+  }
+  .input_all{
+    max-height: 60%;
+  }
+}
+
 .document__card {
   display: flex;
   flex-direction: column;
@@ -5,7 +29,8 @@
   border: 1px solid black;
   border-radius: 5px;
   font-size: var(--text-md);
-  margin-top: 50px;
+  margin:20px 0px;
+  width: 100%;
 }
 
 .document__card__header {
@@ -74,7 +99,8 @@
 }
 
 .input_document_page{
-  width: 1000px;
+  width: 100%;
+
 }
 
 .input_paragraph{

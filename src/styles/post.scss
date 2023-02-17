@@ -112,6 +112,7 @@
   .index-news-block .big-item {
     width: 100%;
   }
+
 }
 
 .wrap {
@@ -184,17 +185,41 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #fff;
-  padding: 1.875rem 1.875rem;
+  padding: 1.875rem;
   z-index: 2;
+  
+
+  display: flex;
+  flex-direction: column;
 }
+
+.index-news-block .big-item .text .text__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: .4;
+
+  z-index: 1;
+}
+
 .index-news-block .big-item .text a {
-  display: block;
+  position: sticky;
   text-decoration: none;
   color: #fff;
   margin-bottom: 1rem;
   font-family: "Golos-UI Med";
   font-size: 1.25rem;
+  z-index: 8;
 }
+
+.index-news-block .big-item .text .date {
+  position: sticky;
+  z-index: 8;
+}
+
 .index-news-block .big-item .text a:hover {
   text-decoration: underline;
 }
@@ -229,5 +254,6 @@
   text-decoration: underline;
 }
 .index-news-block .item .date {
+  // position: sticky;
   color: #50555a;
 }

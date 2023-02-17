@@ -50,8 +50,9 @@ const LastPosts = (params) => {
                           }}
                         >
                           <div className="text">
+                            <div className="text__bg"></div>
                             <a href="#">
-                              <div>{item.title}</div>
+                              {item.title}
                             </a>
                             <div className="date">19 августа 2021, 7:06</div>
                           </div>

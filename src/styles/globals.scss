@@ -3,13 +3,37 @@
 @tailwind utilities; */
 
 @import "ini.scss";
-@import "header.css";
-@import "documents.css";
+@import "header.scss";
+@import "documents.scss";
 @import "layouts.css";
 @import "mobile_navbar.css";
+@import "about.scss";
+@import "appeals.scss";
+@import "contacts.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+@media (max-width: 767px){
+  .header{
+   
+  }
+.footer{
+  padding: 10 0px !important;
+}
+.mobile-navbar{
+  display: flex;
+  
+  flex: 1;
+}
+.layout__children{
+
+} 
+.container{
+  width: 100%;
+  
+}
+
+}
 :root {
   --blue: #1e3a8a;
   --white: rgb(243 244 246);
@@ -47,10 +71,11 @@ footer {
   color: var(--white);
   font-weight: 400;
   padding: 0 20px;
+  flex: 1;
   
 }
 .footer {
-  margin-top: auto;
+ 
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -121,7 +146,6 @@ img {
   .sidebar__container {
     display: none !important;
   }
-
   .sidebar__menu {
     display: none !important;
     
@@ -132,8 +156,7 @@ img {
   .mobile-navbar{
     display: flex!important;
     flex-direction: column;
-    padding: 0 20px;
-    
+    padding: 0px 20px;
   }
 
   .carousel{
@@ -142,13 +165,24 @@ img {
   .mobile-navbar__show{
     max-width: 300px;
   }
+  .page__name{
+   display: none;
+  }
  
 }
 @media (max-width: 480px){
   .footer{
   padding: 20px 20px;
  }
-
+ .header{
+ }
+ .break-keep{
+  width: 100% !important;
+  padding: 20px 20px;
+ }
+ .break-keep img{
+ width: 100%;
+ }
 }
 
 
@@ -194,6 +228,7 @@ img {
   width: 100%;
   font-size: var(--text-2xl);
   padding: 15px 0;
+
 }
 
 .slick-arrow {
