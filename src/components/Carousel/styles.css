@@ -107,23 +107,27 @@
       "text" !important;
     grid-template-rows: 1fr 0fr !important;
     color: black;
-   
   }
   .image{
     width: 100% !important;
-    height: 80% !important;
+    height: 100% !important;
+    display: none;
   }
   .item{
    height: 300px !important;
    width: 100% !important;
+ display: none;
   }
- 
+ .text{
+  display: none !important;
+ }
 }
 
 .slick-slide div .item {
   display: grid !important;
   grid-template: "text image";
   grid-template-columns: 1fr 0.5fr;
+
 
 }
 
