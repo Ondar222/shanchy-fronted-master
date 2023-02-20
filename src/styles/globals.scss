@@ -30,8 +30,8 @@
 
 } 
 .container{
-  width: 100%;
-  
+  width: 100% !important;
+  margin: auto;
 }
 
 }
@@ -161,7 +161,7 @@ img {
   }
 
   .carousel{
-    
+    width: 100%;
   }
   .mobile-navbar__show{
     max-width: 300px;
