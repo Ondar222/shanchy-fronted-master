@@ -17,12 +17,14 @@
 
   .header__service__search {
     flex: 1 !important;
+    
 
     
   }
 
   .header__brand-logo {
     display: none !important;
+    
   }
 
   .header__navbar {
@@ -42,6 +44,7 @@
   padding: 12px 0;
   overflow: hidden;
   
+  
 }
 
 .header__brand {
@@ -51,10 +54,12 @@
   align-items: center;
   font-size: large;
   gap: 9px;
+  
 }
 
 .header__brand-logo {
   display: block;
+  
 }
 
 .header__brand-name {
@@ -72,6 +77,7 @@
   gap: 12px;
   align-items: center;
   justify-content: end;
+  
 }
 
 .header__service__bvi {
@@ -80,6 +86,7 @@
   height: 100%;
   max-width: 30px;
   cursor: pointer;
+  
 }
 
 .header__service__search {
@@ -92,6 +99,7 @@
   border-radius: 5px;
   cursor: pointer;
   padding: 2px 16px;
+  
 }
 
 .header__service:focus-within {
@@ -113,6 +121,7 @@
 }
 
 .header__service__search-input:focus-within {
+  
 }
 
 .header__navbar {
@@ -134,3 +143,6 @@
   padding: 15px 0;
 }
 
+.icon_search{
+  color: black;
+}

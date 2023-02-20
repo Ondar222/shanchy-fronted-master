@@ -105,15 +105,25 @@
     grid-template:
       "image"
       "text" !important;
-    grid-template-rows: 1fr 0.5fr !important;
+    grid-template-rows: 1fr 0fr !important;
+    color: black;
    
   }
+  .image{
+    width: 100% !important;
+    height: 80% !important;
+  }
+  .item{
+   height: 300px !important;
+   width: 100% !important;
+  }
+ 
 }
 
 .slick-slide div .item {
   display: grid !important;
   grid-template: "text image";
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.5fr;
 
 }
 

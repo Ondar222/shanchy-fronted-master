@@ -3,6 +3,7 @@ import PageName from "../../components/PageName/PageName.astro";
 import PostCard from "../../components/Posts/PostCard";
 import MainPageLayout from "../../layouts/MainPageLayout.astro";
 import StandartLayout from "../../layouts/StandartLayout.astro";
+import separator from "../../components/functions/seperator";
 
 const posts = await fetch(`${import.meta.env.PUBLIC_URL}/api/posts?populate=*`)
   .then((res) => res.json())
@@ -22,12 +23,12 @@ const posts = await fetch(`${import.meta.env.PUBLIC_URL}/api/posts?populate=*`)
               <PostCard
                 key={item.id}
                 id={item.id}
-                title={item.title}
+                title={separator(item.title, 80)}
                 preview_image={
                   `${import.meta.env.PUBLIC_URL}` + item.preview_image.url
                 }
-                news_preview={item.news_preview}
-                body={item.body}
+                news_preview={separator(item.news_preview, 250)}
+                body={separator(item.body, 70)}
                 createdAt={item.createdAt}
                 client:load
               />
@@ -55,5 +56,6 @@ const posts = await fetch(`${import.meta.env.PUBLIC_URL}/api/posts?populate=*`)
     display: flex;
     flex-direction: column;
     gap: 1em;
+ 
   }
 </style>
