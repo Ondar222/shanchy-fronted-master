@@ -11,6 +11,7 @@ const HeaderSearchField = observer(() => {
         placeholder="Поиск"
         onChange={(e) => searchQuery.search(e.target.value)}
         className="header__service__search-input"
+        
       />
 
       <a href="/search">
