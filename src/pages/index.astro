@@ -26,7 +26,7 @@ const news = await fetch(
 
 <StandartLayout title="Администрация Чаа-Хольского кожууна">
   <MainPageLayout>
-    <div style="width: 100%; padding: 0 20px;">
+    <div class="post__card__main">
       <MainpageSlider slider={res.slider} client:load />
     <div class="post__card__news">
       <LastPosts news={news} client:load />
@@ -36,3 +36,4 @@ const news = await fetch(
     <!-- <PinnedLinks content={res.pinned_links} /> -->
   </MainPageLayout>
 </StandartLayout>
+
